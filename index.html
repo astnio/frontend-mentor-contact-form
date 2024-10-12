@@ -24,60 +24,63 @@
   </head>
   <body>
     <main>
-      <section>
-        <h1>Contact Us</h1>
+      <section class="main-section">
+        <h1 class="section-title">Contact Us</h1>
         <form class="contact-form">
-          <div class="text-input-wrapper text-input-name">
-            <label for="first-name">First Name</label>
-            <input
-              type="text"
-              name="first-name"
-              id="txt-first-name" />
-            <p style="display: none">This field is required</p>
-          </div>
-          <div class="text-input-wrapper text-input-name">
-            <label for="first-name">Last Name</label>
-            <input
-              type="text"
-              name="last-name"
-              id="txt-last-name" />
-            <p style="display: none">This field is required</p>
-          </div>
-          <div class="text-input-wrapper text-input-email">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              name="email"
-              id="input-email" />
-            <p style="display: none">This field is required</p>
-            <p style="display: none">Please enter a valid email address</p>
-          </div>
-          <fieldset class="query-type-fieldset">
-            <legend>Query Type</legend>
-            <div class="radio-wrapper">
-              <label for="query-type">General Enquiry</label>
+          <div class="form-body">
+            <div class="text-input-wrapper text-input-name">
+              <label for="first-name">First Name</label>
               <input
-                type="radio"
-                name="query-type"
-                id="rdo-general-enquiry" />
+                type="text"
+                name="first-name"
+                id="txt-first-name" />
+              <p style="display: none">This field is required</p>
             </div>
-            <div class="radio-wrapper">
-              <label for="query-type">Support Request</label>
+            <div class="text-input-wrapper text-input-name">
+              <label for="first-name">Last Name</label>
               <input
-                type="radio"
-                name="query-type"
-                id="rdo-support-request" />
+                type="text"
+                name="last-name"
+                id="txt-last-name" />
+              <p style="display: none">This field is required</p>
             </div>
-            <p style="display: none">Please select a query type</p>
-          </fieldset>
-          <div class="message-wrapper">
-            <label for="message">Message</label>
-            <input
-              type="text"
-              name="message"
-              id="txt-message" />
-            <p style="display: none">This field is required</p>
+            <div class="text-input-wrapper text-input-email">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="input-email" />
+              <p style="display: none">This field is required</p>
+              <p style="display: none">Please enter a valid email address</p>
+            </div>
+            <fieldset class="query-type-fieldset">
+              <legend>Query Type</legend>
+              <div class="radio-wrapper">
+                <input
+                  type="radio"
+                  name="query-type"
+                  id="rdo-general-enquiry" />
+                <label for="query-type">General Enquiry</label>
+              </div>
+              <div class="radio-wrapper">
+                <input
+                  type="radio"
+                  name="query-type"
+                  id="rdo-support-request" />
+                <label for="query-type">Support Request</label>
+              </div>
+              <p style="display: none">Please select a query type</p>
+            </fieldset>
+            <div class="message-wrapper">
+              <label for="message">Message</label>
+              <input
+                type="text"
+                name="message"
+                id="txt-message" />
+              <p style="display: none">This field is required</p>
+            </div>
           </div>
+
           <div class="consent-check-wrapper">
             <input
               type="checkbox"
@@ -91,6 +94,7 @@
             </p>
           </div>
           <button
+            class="button body-md text-bold"
             id="btn-contact-form-submit"
             type="submit">
             Submit
