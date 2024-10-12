@@ -18,6 +18,18 @@
   --clr-green-200: rgb(224, 241, 232);
   --clr-red: rgb(215, 60, 60);
 
+  --spacing-1600: 128px;
+  --spacing-500: 40px;
+  --spacing-400: 32px;
+  --spacing-300: 24px;
+  --spacing-200: 16px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
+
+  --radius-sm: 8pt;
+  --radius-md: 12pt;
+  --radius-lg: 16pt;
+
   font-size: 18px;
 }
 
@@ -51,4 +63,26 @@ body {
   min-height: 100vh;
 
   font-family: 'Karla', sans-serif;
+}
+
+/*** Text ***/
+
+.text-heading {
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+
+.body-md,
+.body-sm {
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+.body-sm {
+  font-size: 16px;
+}
+
+.text-bold {
+  font-weight: 700;
 }
