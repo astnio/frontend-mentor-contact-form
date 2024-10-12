@@ -23,11 +23,82 @@
       src="./main.js"></script>
   </head>
   <body>
-    Contact Us First Name This field is required Last Name This field is
-    required Email Address Please enter a valid email address This field is
-    required Query Type General Enquiry Support Request Please select a query
-    type Message This field is required I consent to being contacted by the team
-    To submit this form, please consent to being contacted Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+    <main>
+      <section>
+        <h1>Contact Us</h1>
+        <form class="contact-form">
+          <div>
+            <label for="first-name">First Name</label>
+            <input
+              type="text"
+              name="first-name"
+              id="txt-first-name" />
+            <p style="display: none">This field is required</p>
+          </div>
+          <div>
+            <label for="first-name">Last Name</label>
+            <input
+              type="text"
+              name="last-name"
+              id="txt-last-name" />
+            <p style="display: none">This field is required</p>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="input-email" />
+            <p style="display: none">This field is required</p>
+            <p style="display: none">Please enter a valid email address</p>
+          </div>
+          <fieldset>
+            <legend>Query Type</legend>
+            <div>
+              <label for="query-type">General Enquiry</label>
+              <input
+                type="radio"
+                name="query-type"
+                id="rdo-general-enquiry" />
+            </div>
+            <label for="query-type">Support Request</label>
+            <div>
+              <input
+                type="radio"
+                name="query-type"
+                id="rdo-support-request" />
+            </div>
+            <p style="display: none">Please select a query type</p>
+          </fieldset>
+          <div>
+            <label for="message">Message</label>
+            <input
+              type="text"
+              name="message"
+              id="txt-message" />
+            <p style="display: none">This field is required</p>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="consent-check"
+              id="chk-consent" />
+            <label for="consent-check"
+              >I consent to being contacted by the team</label
+            >
+            <p style="display: none">
+              To submit this form, please consent to being contacted
+            </p>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <section style="display: none">
+        <div>
+          <h3>Message Sent!</h3>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
