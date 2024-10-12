@@ -86,3 +86,68 @@ body {
 .text-bold {
   font-weight: 700;
 }
+
+/*** Form ***/
+form.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: var(--spacing-100);
+
+  width: 100%;
+}
+
+.text-input-name {
+  grid-column: 1fr;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-input-name > {
+  width: 100%;
+}
+
+.text-input-email {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-input-email > input {
+  width: 100%;
+}
+
+fieldset.query-type-fieldset {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-100);
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.radio-wrapper {
+  border: 1px solid;
+  padding: var(--spacing-100);
+}
+
+/* fieldset.query-type-fieldset > legend {
+  margin-bottom: var(--spacing-100);
+} */
+
+.message-wrapper {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.consent-check-wrapper {
+  grid-column: span 2;
+}
+
+#btn-contact-form-submit {
+  grid-column: span 2;
+}

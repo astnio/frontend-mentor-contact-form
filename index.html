@@ -27,7 +27,7 @@
       <section>
         <h1>Contact Us</h1>
         <form class="contact-form">
-          <div>
+          <div class="text-input-wrapper text-input-name">
             <label for="first-name">First Name</label>
             <input
               type="text"
@@ -35,7 +35,7 @@
               id="txt-first-name" />
             <p style="display: none">This field is required</p>
           </div>
-          <div>
+          <div class="text-input-wrapper text-input-name">
             <label for="first-name">Last Name</label>
             <input
               type="text"
@@ -43,8 +43,8 @@
               id="txt-last-name" />
             <p style="display: none">This field is required</p>
           </div>
-          <div>
-            <label for="email">Email</label>
+          <div class="text-input-wrapper text-input-email">
+            <label for="email">Email Address</label>
             <input
               type="email"
               name="email"
@@ -52,17 +52,17 @@
             <p style="display: none">This field is required</p>
             <p style="display: none">Please enter a valid email address</p>
           </div>
-          <fieldset>
+          <fieldset class="query-type-fieldset">
             <legend>Query Type</legend>
-            <div>
+            <div class="radio-wrapper">
               <label for="query-type">General Enquiry</label>
               <input
                 type="radio"
                 name="query-type"
                 id="rdo-general-enquiry" />
             </div>
-            <label for="query-type">Support Request</label>
-            <div>
+            <div class="radio-wrapper">
+              <label for="query-type">Support Request</label>
               <input
                 type="radio"
                 name="query-type"
@@ -70,7 +70,7 @@
             </div>
             <p style="display: none">Please select a query type</p>
           </fieldset>
-          <div>
+          <div class="message-wrapper">
             <label for="message">Message</label>
             <input
               type="text"
@@ -78,7 +78,7 @@
               id="txt-message" />
             <p style="display: none">This field is required</p>
           </div>
-          <div>
+          <div class="consent-check-wrapper">
             <input
               type="checkbox"
               name="consent-check"
@@ -90,7 +90,11 @@
               To submit this form, please consent to being contacted
             </p>
           </div>
-          <button type="submit">Submit</button>
+          <button
+            id="btn-contact-form-submit"
+            type="submit">
+            Submit
+          </button>
         </form>
       </section>
       <section style="display: none">
