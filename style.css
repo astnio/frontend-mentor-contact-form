@@ -108,17 +108,32 @@ form.contact-form {
 
 input,
 .radio-wrapper {
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--clr-grey-500);
   height: 51px;
 }
 
 textarea {
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--clr-grey-500);
   min-height: 105px;
   padding: var(--spacing-200);
   resize: none;
+}
+
+input,
+.radio-wrapper,
+textarea {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--clr-grey-500);
+
+  transition: border 0.1s ease-out;
+}
+
+input:hover,
+.radio-wrapper:hover,
+textarea:hover {
+  border-color: var(--clr-green-600);
+}
+
+input:user-invalid {
+  border-color: var(--clr-red);
 }
 
 .text-input-name {
