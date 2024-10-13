@@ -142,6 +142,25 @@ textarea:user-invalid,
   border-color: var(--clr-red);
 }
 
+/*** Input Error ***/
+
+.input-error-wrapper {
+  display: grid;
+  transition: grid-template-rows 0.15s ease-out;
+}
+
+.input-error-wrapper[data-active='true'] {
+  grid-template-rows: 1fr;
+}
+
+.input-error-wrapper[data-active='false'] {
+  grid-template-rows: 0fr;
+}
+
+.input-error-wrapper > div {
+  overflow: hidden;
+}
+
 /*** Text Inputs ***/
 
 .text-input-name {

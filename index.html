@@ -39,11 +39,15 @@
                 name="first-name"
                 id="txt-first-name"
                 required />
-              <p
-                class="input-error"
-                style="display: none">
-                This field is required
-              </p>
+              <div class="input-error-wrapper">
+                <div>
+                  <p
+                    class="input-error"
+                    style="display: none">
+                    This field is required
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="text-input-wrapper text-input-name">
               <label
@@ -56,11 +60,17 @@
                 name="last-name"
                 id="txt-last-name"
                 required />
-              <p
-                class="input-error"
-                style="display: none">
-                This field is required
-              </p>
+              <div
+                class="input-error-wrapper"
+                data-active="false">
+                <div>
+                  <p
+                    class="input-error"
+                    style="display: none">
+                    This field is required
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="text-input-wrapper text-input-email">
               <label
@@ -73,11 +83,17 @@
                 name="email"
                 id="input-email"
                 required />
-              <p
-                class="input-error"
-                style="display: none">
-                Please enter a valid email address
-              </p> 
+              <div
+                class="input-error-wrapper"
+                data-active="false">
+                <div>
+                  <p
+                    class="input-error"
+                    style="display: none">
+                    Please enter a valid email address
+                  </p>
+                </div>
+              </div>
             </div>
             <fieldset class="query-type-fieldset">
               <legend class="label body-sm">Query Type</legend>
@@ -104,11 +120,17 @@
                   >Support Request</label
                 >
               </div>
-              <p
-                class="input-error"
-                style="display: none">
-                Please select a query type
-              </p>
+              <div
+                class="input-error-wrapper"
+                data-active="false">
+                <div>
+                  <p
+                    class="input-error"
+                    style="display: none">
+                    Please select a query type
+                  </p>
+                </div>
+              </div>
             </fieldset>
             <div class="message-wrapper">
               <label
@@ -121,11 +143,17 @@
                 name="message"
                 id="txt-message"
                 required></textarea>
-              <p
-                class="input-error"
-                style="display: none">
-                This field is required
-              </p>
+              <div
+                class="input-error-wrapper"
+                data-active="false">
+                <div>
+                  <p
+                    class="input-error"
+                    style="display: none">
+                    This field is required
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -138,11 +166,17 @@
             <label for="consent-check"
               >I consent to being contacted by the team</label
             >
-            <p
-              class="input-error"
-              style="display: none">
-              To submit this form, please consent to being contacted
-            </p>
+            <div
+              class="input-error-wrapper"
+              data-active="false">
+              <div>
+                <p
+                  class="input-error"
+                  style="display: none">
+                  To submit this form, please consent to being contacted
+                </p>
+              </div>
+            </div>
           </div>
           <button
             class="button body-md text-bold"
@@ -155,7 +189,13 @@
       <section style="display: none">
         <div>
           <h3>Message Sent!</h3>
-          <p>Thanks for completing the form. We'll be in touch soon!</p>
+          <div class="form-submitted-message-wrapper">
+            <div>
+              <p class="form-submitted-message">
+                Thanks for completing the form. We'll be in touch soon!
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
