@@ -114,6 +114,21 @@ form.contact-form {
 
 /*** --- Inputs --- ***/
 
+/*** Labels ***/
+.label {
+  margin-bottom: var(--spacing-100);
+  color: var(--clr-grey-900);
+}
+
+.label::after {
+  content: ' *';
+  color: var(--clr-green-600);
+}
+
+.constent-check-label.label {
+  margin: 0;
+}
+
 /*** General Input ***/
 
 input,
@@ -134,6 +149,12 @@ textarea {
   border: 1px solid var(--clr-grey-500);
 
   transition: border 0.1s ease-out;
+}
+
+input[type='text'],
+input[type='email'] {
+  padding-inline: var(--spacing-300);
+  font-size: 18px;
 }
 
 input:hover,
@@ -255,11 +276,6 @@ fieldset.query-type-fieldset {
 
   color: var(--clr-white);
   background-color: var(--clr-green-600);
-}
-
-.label {
-  margin-bottom: var(--spacing-100);
-  color: var(--clr-grey-900);
 }
 
 /*** Text ***/
