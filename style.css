@@ -201,7 +201,7 @@ fieldset.query-type-fieldset {
   grid-column: span 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-200);
+  gap: 0 var(--spacing-200);
 
   margin: 0;
   padding: 0;
