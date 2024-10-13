@@ -80,6 +80,9 @@ main {
 /*** Sections ***/
 
 .main-section {
+  display: flex;
+  flex-direction: column;
+
   padding: 40px;
   background-color: var(--clr-white);
   border-radius: var(--radius-lg);
@@ -96,6 +99,9 @@ main {
 
 /*** Form ***/
 form.contact-form {
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   margin-top: 32px;
 }
