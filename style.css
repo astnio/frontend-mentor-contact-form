@@ -211,6 +211,10 @@ fieldset.query-type-fieldset {
   letter-spacing: 0px;
 }
 
+.body-md {
+  font-size: 18px;
+}
+
 .body-sm {
   font-size: 16px;
 }
