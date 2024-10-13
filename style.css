@@ -279,12 +279,15 @@ fieldset.query-type-fieldset {
 .checkbox-wrapper input {
   position: absolute;
   opacity: 0;
+  left: 0;
   cursor: pointer;
   width: 100%;
   height: fit-content;
 }
 
 .checkmark {
+  pointer-events: none;
+
   position: absolute;
   left: 0;
 
