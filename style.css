@@ -133,10 +133,12 @@ textarea {
 input:hover,
 .radio-wrapper:hover,
 textarea:hover {
-  border-color: var(--clr-green-600);
+  border: 1px solid var(--clr-green-600);
 }
 
-input:user-invalid {
+input:user-invalid,
+textarea:user-invalid,
+.radio-wrapper:has(input:user-invalid) {
   border-color: var(--clr-red);
 }
 
@@ -188,6 +190,13 @@ fieldset.query-type-fieldset {
   gap: var(--spacing-100);
 
   padding: var(--spacing-100);
+
+  transition: background-color 0.1s ease-out;
+}
+
+.radio-wrapper:has(input[type='radio']:checked) {
+  background-color: var(--clr-green-200);
+  border: 1px solid var(--clr-green-600);
 }
 
 .rdo-label {
