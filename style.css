@@ -428,7 +428,7 @@ fieldset.query-type-fieldset {
 /*** Success Message ***/
 
 .success-message {
-  position: absolute;
+  position: fixed;
   top: 0;
 
   display: flex;
@@ -490,4 +490,37 @@ fieldset.query-type-fieldset {
 
 .text-bold {
   font-weight: 700;
+}
+
+/*** Responsive Mobile ***/
+
+@media screen and (max-width: 760px) {
+  body {
+    padding-inline: var(--spacing-300);
+    padding-block: var(--spacing-500);
+  }
+
+  .main-section {
+    padding: var(--spacing-200);
+  }
+
+  .form-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  fieldset.query-type-fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+  }
+
+  #txt-message {
+    min-height: 240px;
+  }
+
+  .success-message {
+    margin-inline: var(--spacing-200);
+    width: auto;
+  }
 }
