@@ -4,6 +4,7 @@ const inputRadio = document.querySelector('input[type="radio"]');
 const inputTextarea = document.querySelector('textarea');
 const inputCheckbox = document.querySelector('input[type="checkbox"]');
 const btnSubmit = document.getElementById('btn-contact-form-submit');
+const successMessage = document.getElementById('success-message');
 
 function isInputValid(inputElement) {
   return inputElement.validity.valid;
@@ -53,6 +54,19 @@ function checkAllInputsValidity() {
   handleInvalidCheckbox(inputCheckbox);
 }
 
+function allInputsValid() {
+  const inputs = [
+    inputsText[0],
+    inputsText[1],
+    inputEmail,
+    inputRadio,
+    inputTextarea,
+    inputCheckbox,
+  ];
+
+  return inputs.every((input) => isInputValid(input));
+}
+
 function initInputEventListeners() {
   inputsText.forEach((inputElement) => {
     inputElement.addEventListener('blur', () => {
@@ -72,7 +86,13 @@ function initInputEventListeners() {
     handleInvalidCheckbox(inputCheckbox)
   );
 
-  btnSubmit.addEventListener('click', checkAllInputsValidity);
+  btnSubmit.addEventListener('click', (e) => {
+    e.preventDefault();
+    checkAllInputsValidity();
+    if (allInputsValid()) {
+      successMessage.style.transform = 'translateY(0)';
+    }
+  });
 }
 
 initInputEventListeners();
