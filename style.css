@@ -262,6 +262,72 @@ fieldset.query-type-fieldset {
   margin-block: 40px;
 }
 
+/*** Custom Checkbox ***/
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  padding-left: var(--spacing-400);
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: fit-content;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+
+  height: 18px;
+  width: 18px;
+
+  border-radius: 2pt;
+  border: 1px solid var(--clr-grey-500);
+
+  background-color: var(--clr-white);
+}
+
+.checkbox-wrapper:hover input ~ .checkmark {
+  border: 1px solid var(--clr-green-600);
+}
+
+.checkbox-wrapper input:checked ~ .checkmark {
+  background-color: var(--clr-green-600);
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox-wrapper input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkbox-wrapper .checkmark::after {
+  left: 5px;
+  top: 1px;
+
+  width: 6px;
+  height: 12px;
+
+  border: solid white;
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+}
+
 /*** Buttons ***/
 
 #btn-contact-form-submit {
