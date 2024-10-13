@@ -37,7 +37,7 @@ inputs.forEach((inputElement) => {
   });
 });
 
-textareaInput.addEventListener('blue', () => {
+textareaInput.addEventListener('blur', () => {
   handleInvalidInput(textareaInput);
 });
 
