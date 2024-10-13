@@ -257,8 +257,8 @@ fieldset.query-type-fieldset {
 
 .consent-check-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--spacing-200);
   margin-block: 40px;
 }
 
