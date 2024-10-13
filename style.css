@@ -239,7 +239,7 @@ fieldset.query-type-fieldset {
   align-items: center;
   gap: var(--spacing-100);
 
-  padding: var(--spacing-100);
+  padding-inline: var(--spacing-400);
 
   transition: background-color 0.1s ease-out;
 }
@@ -283,15 +283,16 @@ fieldset.query-type-fieldset {
 
   left: 0;
 
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
 
   border-radius: 50%;
   outline: 2px solid var(--clr-grey-500);
+  opacity: 0.4;
 
   background-color: transparent;
 
-  transition: outline 0.1s ease-out;
+  transition: outline, opacity 0.1s ease-out;
 }
 
 .radio-input-wrapper:hover input ~ .radio-button {
@@ -309,8 +310,8 @@ fieldset.query-type-fieldset {
 }
 
 .radio-input-wrapper .radio-button::after {
-  top: 4px;
-  left: 4px;
+  top: 3px;
+  left: 3px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -319,6 +320,7 @@ fieldset.query-type-fieldset {
 
 .radio-input-wrapper:has(input:checked) > .radio-button {
   outline: 2px solid var(--clr-green-600);
+  opacity: 1;
 }
 
 /*** Checkbox ***/
