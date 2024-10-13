@@ -249,8 +249,76 @@ fieldset.query-type-fieldset {
   border: 1px solid var(--clr-green-600);
 }
 
-.rdo-label {
+/*** Custom Radio Inputs ***/
+
+.radio-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+
   color: var(--clr-grey-900);
+
+  width: 100%;
+  height: 100%;
+
+  padding-left: var(--spacing-400);
+
+  user-select: none;
+}
+
+.radio-input-wrapper input {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: fit-content;
+}
+
+.radio-button {
+  pointer-events: none;
+
+  position: absolute;
+
+  left: 0;
+
+  height: 20px;
+  width: 20px;
+
+  border-radius: 50%;
+  outline: 2px solid var(--clr-grey-500);
+
+  background-color: transparent;
+
+  transition: outline 0.1s ease-out;
+}
+
+.radio-input-wrapper:hover input ~ .radio-button {
+  background-color: transparent;
+}
+
+.radio-button::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.radio-input-wrapper input:checked ~ .radio-button::after {
+  display: block;
+}
+
+.radio-input-wrapper .radio-button::after {
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--clr-green-600);
+}
+
+.radio-input-wrapper:has(input:checked) > .radio-button {
+  outline: 2px solid var(--clr-green-600);
 }
 
 /*** Checkbox ***/
