@@ -152,6 +152,10 @@ textarea:user-invalid,
 
 .input-error-wrapper {
   display: grid;
+  color: var(--clr-red);
+  font-size: 16px;
+  margin-top: var(--spacing-100);
+
   transition: grid-template-rows 0.15s ease-out;
 }
 
