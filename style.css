@@ -115,7 +115,7 @@ input,
 
 textarea {
   border-radius: var(--radius-sm);
-  border: 1px solid var (--clr-grey-500);
+  border: 1px solid var(--clr-grey-500);
   min-height: 105px;
   padding: var(--spacing-200);
   resize: none;
